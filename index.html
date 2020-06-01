@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сайт Frontend-разработчика</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="media.css">
+    <link rel="stylesheet" type="text/css" href="swiper.min.css">
+    <script src="https://kit.fontawesome.com/86862d46c2.js" crossorigin="anonymous"></script>
+    <script src = "jquery-3.4.1.min.js"></script>
+    <script src="jquery.maskedinput.min.js"></script>
+    <script src="my_scripts.js"></script>
+    <script src="swiper.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <section class="header__header-top">
+            <h5 class="visually-hidden">Верхняя часть</h5>
+            <div class="fixed-container">
+            <nav class="header__menu">
+            <ul class="header__list">
+             <li class="header__item"><a href="#1">Услуги</a></li>
+             <li class="header__item"><a href="#2">Портфолио</a></li>
+             <li class="header__item"><a href="#3">Стоимость</a></li>
+            </ul>
+            </nav>
+
+        <div class="header__burger-menu">
+           <input id="header__burger-menu-input" type="checkbox" />
+            <label class="header__burger-menu-label" for="header__burger-menu-input">
+             <span></span>
+           </label>
+         <ul class="header__burger-list">
+        <li><a class="header__burger-item" href="#1">Услуги</a></li>
+        <li><a class="header__burger-item" href="#2">Портфолио</a></li>
+        <li><a class="header__burger-item" href="#3">Стоимость</a></li>
+         </ul>
+        </div>
+        
+
+        <div class="header__right-items right-items">
+            <address class="right-items__tel">
+                <a href="tel:+7(499)9957755">+7(499)995-77-55</a>
+            </address>
+            
+             <div class="right-items__call">
+                 <input class="right-items__input" rel="reg_form" type="button" name="takeacall" value="Заказать звонок">
+            </div>
+            
+                <div id="right-items__telephone-iqon">
+                    <button class="right-items__button" rel="reg_form"></button>
+                </div>
+        </div>
+    </div>
+       </section>
+    
+        <section class="header__bottom bottom-section">
+           
+        <p class="bottom-section__sign-hooks">{ }</p>
+        <p class="bottom-section__sign-div">&lt;div&gt;</p>
+        <p class="bottom-section__sign-lattice">#</p>
+        <p class="bottom-section__sign-line">&lt;/&gt;</p>
+        <p class="bottom-section__sign-div-1">&lt;div&gt;</p>
+        <p class="bottom-section__sign-line-1">&lt;/&gt;</p>
+
+            <div class="fixed-container">
+               
+            
+                <div class="bottom-section__text">
+                 <h1 class="bottom-section__name">Дмитрий Алексеев</h1>
+                 <h2 class="bottom-section__description">Frontend-разработчик и веб-верстальщик</h2>
+                    <div class="bottom-section__button">
+                        <input class="bottom-section__input" rel="reg_form" type="button" name="info-about" value="Узнать больше">
+                    </div>
+                </div>
+                 
+                
+            
+            
+                
+                <div class="bottom-section__image">
+                    <picture class="bottom-section__portrait">
+                        <source media="(max-width: 479px)" srcset="elements/man2.png">
+                        <source media= "(min-width: 480px)" srcset="elements/man1.png">
+                        <img src="elements/man1.png" srcset="elements/man1.png" alt="head">
+                   </picture> 
+                </div>
+            </div>
+        
+</section>
+ </header>
+
+    
+    <div class="central-container">
+ 
+        <section class="central-container__block-services section-services" id="1">
+            <div class="fixed-container">
+                <h3 class="section-services__title">Что я делаю</h3>
+                <div class="section-services__holder">
+                    <div class="section-services__box">
+                        <img src="elements/comp.png" class="section-services__imgs" alt="comp1">
+                        <span class="section-services__text">
+                            Верстка лендинг-страниц и сайтов любой сложности
+                        </span>
+                    </div>
+                    <div class="section-services__box">
+                        <img src="elements/gadgets.png" class="section-services__imgs" alt="gadgets2">
+                        <span class="section-services__text">
+                            Адаптивная верстка под все браузеры и устройства
+                        </span>
+                    </div>
+                    <div class="section-services__box">
+                        <img src="elements/programming.png" class="section-services__imgs" alt="programm3">
+                        <span class="section-services__text">
+                           Frontend-разработка и программирование
+                        </span>
+                    </div>
+                    <div class="section-services__box">
+                        <img src="elements/coding.png" class="section-services__imgs" alt="coding4">
+                        <span class="section-services__text">
+                            Исправление и доработка существующей верстки
+                        </span>
+                    </div>
+                </div>
+               
+                 <div class="section-services__button">
+                     <input class="section-services__input" rel="reg_form" type="button" name="payment" value="Узнать стоимость">
+                </div>
+
+                <div class="popup reg_form">
+                    <a class="close" href="#">Close</a>
+                    <h2 class="reg_form__text">Обратная связь</h2>
+                    <form class="reg_form__form" method="post" action="https://echo.htmlacademy.ru/">
+                        <label class="reg_form__label">Имя
+                            <input class="reg_form__input" type="text" required name="name"/>
+                        </label>
+                        
+                        <label class="reg_form__label">Номер телефона
+                            <input class="reg_form__input" type="tel" required name="phonenumb" id="phone" placeholder="+7 (999) 99 99 999" />
+                        </label>
+                        
+                        <input  class="reg_form__input" type="submit" value="Отправить" />	
+                    </form>
+                    <div class="reg_form__result" id="result">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="central-container__block-jobs section-jobs" id="2">
+            <div class="fixed-container">
+                <h4 class="section-jobs__title">Примеры моих работ</h4>
+                <div class="section-jobs swiper-container">
+                    <div class="swiper-container__examples">
+                      <article class="swiper-container__article">
+                          <img src="elements/Layer-1.png" class="swiper-container__imgs" alt="example-1">
+                          <h5 class="swiper-container__text">
+                          Сайт психолога Веры Антоновой
+                          </h5>
+                      </article>
+                     
+                      <article class="swiper-container__article">
+                          <img src="elements/Layer-2.png" class="swiper-container__imgs" alt="example-2">
+                          <h5 class="swiper-container__text">
+                          Сайт магазина детской одежды
+                          </h5>
+                          
+                      </article>
+                      <article class="swiper-container__article">
+                          <img src="elements/Layer-3.png" class="swiper-container__imgs" alt="example-3">
+                          <h5 class="swiper-container__text">
+                              Сайт магазина «Рыболов»                       
+                          </h5>
+                      </article>
+                  </div>
+                  
+                  <div class="swiper-container__swiper-pagination"></div>
+                  
+                  <div class="swiper-container__button-prev"></div>
+                  <div class="swiper-container__button-next"></div>
+             </div>
+             <div class="section-jobs__button">
+                 <input class="section-jobs__input" rel="reg_form" type="button" name="order1" value="Заказать проект">
+            </div>        
+            </div>
+            
+        </section>
+
+        <section class="central-container__block-info section-info" id="3">
+            <p class="section-info__sign-hooks">{ }</p>
+            <p class="section-info__sign-lattice">#</p>
+            <p class="section-info__sign-line">&lt;/&gt;</p>
+            <p class="section-info__sign-hooks-1">{ }</p>
+            <p class="section-info__sign-div">&lt;div&gt;</p>
+            <div class="fixed-container">
+                <div class="section-info__desc">
+                <h2 class="section-info__text">Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h2>
+                <small class="section-info__subtitle">* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально, в зависимости от сложности задач.</small>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="fixed-container">
+            <nav class="footer__menu">
+                <ul class="footer__list">
+                 <li class="footer__item"><a href="#">Услуги</a></li>
+                 <li class="footer__item"><a href="#">Портфолио</a></li>
+                 <li class="footer__item"><a href="#">Стоимость</a></li>
+                </ul>
+            </nav>
+
+         <address class="footer__addresses addresses-box">
+             <div class="addresses-box__div">
+                 <span class="fas fa-phone"></span>
+                <div class="addresses-box__link">
+                <a href="tel:+7(499)9957755">+7 (499) 995-77-55</a>
+                </div>
+            </div>
+
+           <div class="addresses-box__div">
+             <span class="fas fa-envelope"></span>
+             <div class="addresses-box__link">
+                <a href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
+             </div>
+            </div>
+         </address>
+
+        <div class="footer__last-column last-column">
+                <div class="last-column__box">
+                    <input class="last-column__input" rel="reg_form" type="button" name="take-a-call" value="Заказать звонок">
+                </div>
+          
+
+            <address class="footer__links networks">
+                <a href="https://vk.com/marinavch" class="networks__vk"></a>
+                <a href="https://www.facebook.com/profile.php?id=100011995968284" class="networks__fb"></a>
+                <a href="https://t.me/marinavch" class="networks__tg"></a>
+                <a href="https://www.instagram.com/march_ph/?hl=ru" class="networks__inst"></a>
+            </address>
+        </div>
+
+     </div>
+     <div class="footer__bottom">
+        <small class="footer__text">
+            © Дмитрий Алексеев, 2016-2018
+        </small>
+     </div>
+    </footer>
+</body>
+  </html>
