@@ -693,7 +693,8 @@
             
         }
         .swiper-container__text {
-            font-size: 24px;
+            font-size: 21px;
+            text-align: center;
         }
         .section-jobs__button {
             margin-top: 60px;
