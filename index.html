@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Сайт Frontend-разработчика</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="media.css">
-    <link rel="stylesheet" type="text/css" href="swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <script src="https://kit.fontawesome.com/86862d46c2.js" crossorigin="anonymous"></script>
-    <script src = "jquery-3.4.1.min.js"></script>
-    <script src="jquery.maskedinput.min.js"></script>
-    <script src="my_scripts.js"></script>
-    <script src="swiper.min.js"></script>
+    <script src = "js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/my_scripts.js"></script>
+    <script src="js/swiper.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -71,7 +71,7 @@
                  <h1 class="bottom-section__name">Дмитрий Алексеев</h1>
                  <h2 class="bottom-section__description">Frontend-разработчик и веб-верстальщик</h2>
                     <div class="bottom-section__button">
-                        <input class="bottom-section__input" rel="reg_form" type="button" name="info-about" value="Узнать больше">
+                        <input class="bottom-section__input" rel="reg_form-more" type="button" name="info-about" value="Узнать больше">
                     </div>
                 </div>
                  
@@ -125,7 +125,7 @@
                 </div>
                
                  <div class="section-services__button">
-                     <input class="section-services__input" rel="reg_form" type="button" name="payment" value="Узнать стоимость">
+                     <input class="section-services__input" rel="reg_form-more" type="button" name="payment" value="Узнать стоимость">
                 </div>
 
                 <div class="popup reg_form">
@@ -147,6 +147,27 @@
                     </div>
                 </div>
                 
+                <div class="popup reg_form-more">
+                    <a class="close" href="#">Close</a>
+                    <h2 class="reg_form-more__text">Обратная связь</h2>
+                    <form class="reg_form-more__form" method="post" action="https://echo.htmlacademy.ru/">
+                        <label class="reg_form-more__label">Имя
+                            <input class="reg_form-more__input" type="text" required name="name"/>
+                        </label>
+                        
+                        <label class="reg_form-more__label">Номер телефона
+                            <input class="reg_form-more__input" type="tel" required name="phonenumb" id="phone" placeholder="+7 (999) 99 99 999" />
+                        </label>
+                        <label class="reg_form-more__label">Почта
+                            <input class="reg_form-more__input" type="email" required name="email" id="mail" />
+                        </label>
+                        
+                        <input  class="reg_form-more__input" type="submit" value="Отправить" />	
+                    </form>
+                    <div class="reg_form-more__result" id="result">
+                        
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -183,7 +204,7 @@
                   <div class="swiper-container__button-next"></div>
              </div>
              <div class="section-jobs__button">
-                 <input class="section-jobs__input" rel="reg_form" type="button" name="order1" value="Заказать проект">
+                 <input class="section-jobs__input" rel="reg_form-more" type="button" name="order1" value="Заказать проект">
             </div>        
             </div>
             
