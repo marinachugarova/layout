@@ -12,6 +12,8 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/my_scripts.js"></script>
     <script src="js/swiper.min.js"></script>
+    <link rel="shortcut icon" href="elements/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="elements/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -132,40 +134,40 @@
                     <a class="close" href="#">Close</a>
                     <h2 class="reg_form__text">Обратная связь</h2>
                     <form class="reg_form__form" method="post" action="https://echo.htmlacademy.ru/">
-                        <label class="reg_form__label">Имя
-                            <input class="reg_form__input" type="text" required name="name"/>
+                        <label class="reg_form__label">Имя*
+                            <input class="reg_form__input" type="text" required name="name" pattern="^[А-Яа-яЁё\s]+$" placeholder="Иван"/>
                         </label>
                         
-                        <label class="reg_form__label">Номер телефона
+                        <label class="reg_form__label">Номер телефона*
                             <input class="reg_form__input" type="tel" required name="phonenumb" id="phone" placeholder="+7 (999) 99 99 999" />
                         </label>
                         
                         <input  class="reg_form__input" type="submit" value="Отправить" />	
                     </form>
                     <div class="reg_form__result" id="result">
-                        
                     </div>
+
+                    
                 </div>
                 
                 <div class="popup reg_form-more">
                     <a class="close" href="#">Close</a>
                     <h2 class="reg_form-more__text">Обратная связь</h2>
                     <form class="reg_form-more__form" method="post" action="https://echo.htmlacademy.ru/">
-                        <label class="reg_form-more__label">Имя
-                            <input class="reg_form-more__input" type="text" required name="name"/>
+                        <label class="reg_form-more__label">Имя*
+                            <input class="reg_form-more__input" type="text" required name="name" pattern="^[А-Яа-яЁё\s]+$" placeholder="Иван"/>
                         </label>
                         
-                        <label class="reg_form-more__label">Номер телефона
+                        <label class="reg_form-more__label">Номер телефона*
                             <input class="reg_form-more__input" type="tel" required name="phonenumb" id="phone_more" placeholder="+7 (999) 99 99 999" />
                         </label>
-                        <label class="reg_form-more__label">Почта
-                            <input class="reg_form-more__input" type="email" required name="email" id="mail" />
+                        <label class="reg_form-more__label">Почта*
+                            <input class="reg_form-more__input" type="email" required name="email" id="mail" pattern="\S+@[a-z]+.[a-z]+" placeholder="ivanivanov@mail.ru" />
                         </label>
                         
                         <input  class="reg_form-more__input" type="submit" value="Отправить" />	
                     </form>
                     <div class="reg_form-more__result" id="result_more">
-                        
                     </div>
                 </div>
             </div>
