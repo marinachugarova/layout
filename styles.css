@@ -772,15 +772,15 @@ scroll-behavior: smooth;
      }
     .reg_form__input:focus {
      outline: none;
-     border:1px solid #fac9c9  ;
+     border:1px solid #facfcf  ;
     }
             
-     .reg_form__input:valid {
+    .reg_form__input:required:valid {
      box-shadow: 0 0 10px #c9fd9d ;
      border:1px solid  #71d159;
     
      }
-    .reg_form__input:focus:invalid {
+    .reg_form__input:hover:invalid {
         border:1px solid red;
     }
      
@@ -847,10 +847,10 @@ scroll-behavior: smooth;
     }
     .reg_form-more__input:focus {
      outline: none;
-     border:1px solid  #da92ac;
+     border:1px solid  #facfcf;
     }
                         
-    .reg_form-more__input:valid {
+    .reg_form-more__input:required:valid{
         box-shadow: 0 0 10px #c9fd9d ;
         border:1px solid  #71d159;
     }
@@ -1392,5 +1392,6 @@ left:0;
 display:none;
 background:#000;
 opacity:.8;
+filter: alpha;
 z-index: 4;
 }
