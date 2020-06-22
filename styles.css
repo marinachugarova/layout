@@ -3,6 +3,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
     src: url('../fonts/roboto-v20-cyrillic-100.eot'); /* IE9 Compat Modes */
     src: local('Roboto Thin'), local('Roboto-Thin'),
          url('../fonts/roboto-v20-cyrillic-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -16,6 +17,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/roboto-v20-cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local('Roboto'), local('Roboto-Regular'),
          url('../fonts/roboto-v20-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -29,6 +31,7 @@
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 400;
+    font-display: swap;
     src: url('../fonts/roboto-v20-cyrillic-italic.eot'); /* IE9 Compat Modes */
     src: local('Roboto Italic'), local('Roboto-Italic'),
          url('../fonts/roboto-v20-cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -42,6 +45,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
+    font-display: swap;
     src: url('../fonts/roboto-v20-cyrillic-900.eot'); /* IE9 Compat Modes */
     src: local('Roboto Black'), local('Roboto-Black'),
          url('../fonts/roboto-v20-cyrillic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -55,6 +59,7 @@
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 900;
+    font-display: swap;
     src: url('../fonts/roboto-v20-cyrillic-900italic.eot'); /* IE9 Compat Modes */
     src: local('Roboto Black Italic'), local('Roboto-BlackItalic'),
          url('../fonts/roboto-v20-cyrillic-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -94,21 +99,16 @@ html, body {
 	position: relative;
 	display: flex;
     justify-content: space-between;
-    
-
-    
-	display: -ms-flexbox;
+    display: -ms-flexbox;
      -ms-flex-pack: justify;
-    
-     
+   
 }
 
 .header {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    
-    
+  
 }
 .header__header-top .fixed-container {
     display: flex;
@@ -128,20 +128,14 @@ html, body {
     padding: 0;
     margin: 0;
     align-items: center;
-    
-    
-    
     display: -ms-flexbox;
     -ms-flex-direction: row;   
     -ms-flex-align: center;
-          
-
 }
 .header__item {
     list-style-type: none;
     margin-right: 35px;
-    
-    
+  
 }
 .header__menu  a:hover {
     color: #f82370;
@@ -359,7 +353,6 @@ html, body {
     left: 90px;
     transform: rotate(32deg);
     margin: 0;
-    
     opacity:0;
     transition: 2s; 
     animation: show 3s 1;
@@ -384,7 +377,6 @@ html, body {
     animation: show 3s 1;
     animation-fill-mode: forwards; 
     animation-delay: 1s; 
-    
     background: linear-gradient(-15deg, #ff8f5a -6%,#ff3366 43%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
@@ -475,7 +467,6 @@ opacity:1;
     background-repeat: no-repeat;
     background-position:right top;
     background-size: 650px 850px ;
-
     display: -ms-flexbox;
    -ms-flex-direction: row;
     -ms-flex-pack: justify;
@@ -486,9 +477,7 @@ opacity:1;
     display: flex;
     padding: 0;
     margin: 0;
-
-    display: -ms-flexbox;
-   
+    display: -ms-flexbox;  
 }
 
 
@@ -509,11 +498,8 @@ opacity:1;
     flex-direction: column;
     padding: 0;
     margin: 180px 0 235px 0;
-
     display: -ms-flexbox;
     -ms-flex-direction: column;
-  
-
 }
 
 
@@ -521,7 +507,6 @@ opacity:1;
     font-size: 76px;
     display: flex;
     margin: 0;
-
     display: -ms-flexbox;
     
 }
@@ -531,14 +516,12 @@ opacity:1;
     font-size: 25px;
     color: #8993ad;
     font-weight: normal;
-
     display: -ms-flexbox;
 }
 .bottom-section__button {
     display: flex; 
     align-self: flex-start;
-     display: -webkit-box;
-
+    display: -webkit-box;
     display: -ms-flexbox;
 }
 .bottom-section__button :focus {
@@ -564,7 +547,6 @@ opacity:1;
     border: none;
     cursor: pointer;
     white-space: pre-line;
-
     display: -ms-flexbox;
     display: -webkit-box;
     -webkit-appearance: none;
@@ -580,17 +562,13 @@ scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     padding: 100px 0 100px 0;
-
- 
     display: -ms-flexbox;
    -ms-flex-direction: column;
    -ms-flex-align: center;
 }
 .section-services .fixed-container {
     display: flex;
-    flex-direction: column;
-
-    
+    flex-direction: column; 
     display: -ms-flexbox;
      -ms-flex-direction: column;
             
@@ -601,9 +579,6 @@ scroll-behavior: smooth;
     text-align: center;
     margin: 0 0 60px 0;
     font-size: 54px;
-    
-
-    
     display: -ms-flexbox;
     -ms-flex-pack: center;
           
@@ -613,7 +588,6 @@ scroll-behavior: smooth;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-
     display: -ms-flexbox;
     -ms-flex-direction: row;
     -ms-flex-pack: justify;
@@ -623,10 +597,7 @@ scroll-behavior: smooth;
     display: flex;
     flex-direction:column;
     flex-basis: 270px;
-    margin: 10px 0 10px 0;
-    
-
-    
+    margin: 10px 0 10px 0; 
     display: -ms-flexbox;
     -ms-flex-direction:column;  
     -ms-flex-preferred-size: 270px;
@@ -637,8 +608,6 @@ scroll-behavior: smooth;
     display: flex;
     width: 27%;
     align-self: center;
-
-   
     display: -ms-flexbox;
     -ms-flex-item-align: center;
 }
@@ -648,7 +617,6 @@ scroll-behavior: smooth;
     margin-top: 25px;
     text-align: center; 
     display: flex;
-
     display: -ms-flexbox;
     -ms-flex-pack: center;
 
@@ -657,8 +625,6 @@ scroll-behavior: smooth;
     display: flex;
     align-self: center;
     margin-top: 95px;
-
-    
     display: -ms-flexbox;
     -ms-flex-pack: center;
      display: -webkit-box;
@@ -673,7 +639,6 @@ scroll-behavior: smooth;
     border: none;
     cursor: pointer;
     white-space: pre-line;
-
     display: -ms-flexbox;
      display: -webkit-box;
      -webkit-appearance: none;
@@ -772,10 +737,10 @@ scroll-behavior: smooth;
      }
     .reg_form__input:focus {
      outline: none;
-     border:1px solid #fac9c9  ;
+     border:1px solid #ffa3e3  ;
     }
             
-     .reg_form__input:valid {
+    .reg_form__input:required:valid {
      box-shadow: 0 0 10px #c9fd9d ;
      border:1px solid  #71d159;
     
@@ -802,9 +767,9 @@ scroll-behavior: smooth;
      
             
      }
-     .reg_form__input[type=submit]:valid {
-        box-shadow: none;
-        }
+    .reg_form__input[type=submit]:valid {
+     box-shadow: none;
+     }
      .reg_form__input[type=submit]:hover {
      background:#f82370;
      }
@@ -847,10 +812,10 @@ scroll-behavior: smooth;
     }
     .reg_form-more__input:focus {
      outline: none;
-     border:1px solid  #da92ac;
+     border:1px solid  #facfcf;
     }
                         
-    .reg_form-more__input:valid {
+    .reg_form-more__input:required:valid{
         box-shadow: 0 0 10px #c9fd9d ;
         border:1px solid  #71d159;
     }
@@ -870,29 +835,24 @@ scroll-behavior: smooth;
     border: 0;
     cursor:pointer;
     text-transform:uppercase;
-    font-weight: bold;
-    /*height:35px;*/
     width:100%;
     -webkit-appearance: none;
      }
     .reg_form-more__input[type=submit]:hover {
       background:#f82370;
     }
-     .reg_form-more__input[type=submit]:active {
+ .reg_form-more__input[type=submit]:active {
        background-color: #ac184e;
       }
-        .reg_form-more__input[type=submit]:valid { 
-            box-shadow: none;
-         }    
+     .reg_form-more__input[type=submit]:valid { 
+        box-shadow: none;
+     }    
 
 
 .section-jobs .fixed-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
-    
-
-
     display: -ms-flexbox;
      -ms-flex-direction: column;
            
@@ -903,7 +863,6 @@ scroll-behavior: smooth;
     text-align: center;
     display: flex;
     justify-content: center;
-
     display: -ms-flexbox;
     -ms-flex-pack: center;
            
@@ -918,10 +877,6 @@ scroll-behavior: smooth;
  .swiper-container__examples {
 	display: flex;
     flex-direction: row;
-    
-    
-    
-    
     display: -ms-flexbox;
     -ms-flex-direction: row;
     -ms-flex-pack: justify;
@@ -932,13 +887,10 @@ scroll-behavior: smooth;
     flex-direction: column;
     display: -ms-flexbox;
     -ms-flex-direction: column;
-   
-
 }
 .swiper-container__imgs {
     margin-bottom: 40px;
     display: flex;
-    
     display: -ms-flexbox;
 }
 
@@ -960,22 +912,18 @@ scroll-behavior: smooth;
     right: auto;
     position: absolute;
     top: 35%;
-    
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
-    
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
 	background-color: transparent;
-	
-    -webkit-filter: drop-shadow(2px 2px 14px #222);
-    
+    -webkit-filter: drop-shadow(2px 2px 14px #222);  
     filter: drop-shadow(0px 0px 5px rgb(110, 109, 109)); 
 }
 .swiper-container__button-next {
@@ -984,25 +932,20 @@ scroll-behavior: smooth;
     left: auto;
     position: absolute;
     top: 35%;
-    
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
-    
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
 	background-color: transparent;
-	
     -webkit-filter: drop-shadow(2px 2px 14px #222);
-    
     filter: drop-shadow(0px 0px 5px rgb(110, 109, 109)); 
-     
-     transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 
@@ -1041,8 +984,7 @@ scroll-behavior: smooth;
     display: -ms-flexbox;
     -ms-flex-item-align: center; 
     margin-top: 90px;
-    
-     display: -webkit-box;
+    display: -webkit-box;
 }
 .section-jobs__button :focus {
     background-color: #f82370 ;
@@ -1094,9 +1036,6 @@ scroll-behavior: smooth;
     animation: show 3s 1;
     animation-fill-mode: forwards; 
     animation-delay: 1s;
-    
-    
-    
 
 }
 .section-info__sign-lattice {
@@ -1248,11 +1187,8 @@ scroll-behavior: smooth;
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
-    
     display: -ms-flexbox;
-    -ms-flex-direction: row;
-
-    
+    -ms-flex-direction: row;  
 }
 .addresses-box__link :hover {
     color:  #8993ad;
@@ -1392,5 +1328,6 @@ left:0;
 display:none;
 background:#000;
 opacity:.8;
+filter: alpha;
 z-index: 4;
 }
