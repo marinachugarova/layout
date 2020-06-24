@@ -1,154 +1,81 @@
-
-
-	$(document).ready(function() {
+$(document).ready(function() {
 	$("#phone").mask("+7 (999) 99-99-999");
 	$("#phone_more").mask("+7 (999) 99-99-999");
 
+	$('input[type=button]').click(function () {
+		$('div.'+$(this).attr("rel")).fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show();
+		return false;				
+	});	
+	$('a.close').click(function () {
+		$(this).parent().fadeOut(100);
+		$('#overlay').remove('#overlay');
+		return false;
+	});
 
+	$(".reg_form__form").submit(function(){
+		var $form = $(this);
+		$.post(
+			$form.attr("action"),
+			$form.serialize(),   
+		 function () {
+			$('.reg_form').html("<div class='reg_form__result style= dispaly: flex'></div>");
+			$('.reg_form__result').html("<h2>Спасибо!</h2>")
+			.append ("<a class='result__close' href='#'>Close</a>")
+			.append("<p>Мы свяжемся с Вами в ближайшее время.</p>");
+			 $ ('.reg_form').fadeOut(1500);
+			 $ ('#overlay').fadeOut(1500, function(){
 	
-	$('.right-items__input').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
+			$('.reg_form__result').html("<h2>Заявка уже отправлена!</h2>")
+			.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
+			.append("<a class='result__close' href='#'>Close</a>");
+				
+			$('.result__close').click(function Close () {
+			$('.reg_form').fadeOut(100);
+			$('#overlay').remove('#overlay');
+			return false;
+			});
+			});
+
+			$('.result__close').click(Close)
+		 });  
 		return false;
 	});
-
-
-	$('.bottom-section__input').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-
-	$('.section-services__input').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-
-	$('.section-jobs__input').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-
-	$('.last-column__input').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-
-	$('.right-items__button').click(function () {
-		$('div.'+$(this).attr("rel")).fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;				
-	});	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-
-  $(".reg_form__form").submit(function(){
-    
-    var $form = $(this);
-    
-    $.post(
-        $form.attr("action"),
-        $form.serialize(),   
-     function () {
-        $('.reg_form').html("<div class='reg_form__result style= dispaly: flex'></div>");
-		$('.reg_form__result').html("<h2>Спасибо!</h2>")
-		.append ("<a class='result__close' href='#'>Close</a>")
-        .append("<p>Мы свяжемся с Вами в ближайшее время.</p>");
-         $ ('.reg_form').fadeOut(1500);
-		 $ ('#overlay').fadeOut(1500, function(){
-
-		$('.reg_form__result').html("<h2>Заявка уже отправлена!</h2>")
+	$(".reg_form-more__form").submit(function(){	
+	var $form = $(this);	
+	$.post(
+	 $form.attr("action"),
+	  $form.serialize(),   
+	 function () {
+	  $('.reg_form-more').html("<div class='reg_form-more__result style= dispaly: flex'></div>");
+	 $('.reg_form-more__result').html("<h2>Спасибо!</h2>")
+	.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
+	.append ("<a class='result__close' href='#'>Close</a>");
+	 $ ('.reg_form-more').fadeOut(1500);
+	 $ ('#overlay').fadeOut(1500, function(){
+	
+		$('.reg_form-more__result').html("<h2>Заявка уже отправлена!</h2>")
 		.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
 		.append("<a class='result__close' href='#'>Close</a>");
 			
-		$('.result__close').click(function () {
-		$('.reg_form').fadeOut(100);
+		$('.result__close').click(function Close_2 () {
+		$('.reg_form-more').fadeOut(100);
 		$('#overlay').remove('#overlay');
 		return false;
 		});
-		});
-		
-		 
+		}); 
 	
-		
-     }
-   
-    );  
-    return false;
-});
-$(".reg_form-more__form").submit(function(){
-    
-var $form = $(this);
-    
-$.post(
- $form.attr("action"),
-  $form.serialize(),   
- function () {
-  $('.reg_form-more').html("<div class='reg_form-more__result style= dispaly: flex'></div>");
- $('.reg_form-more__result').html("<h2>Спасибо!</h2>")
-.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
-.append ("<a class='result__close' href='#'>Close</a>");
- $ ('.reg_form-more').fadeOut(1500);
- $ ('#overlay').fadeOut(1500, function(){
-
-	$('.reg_form-more__result').html("<h2>Заявка уже отправлена!</h2>")
-	.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
-	.append("<a class='result__close' href='#'>Close</a>");
-		
-	$('.result__close').click(function () {
-	$('.reg_form-more').fadeOut(100);
-	$('#overlay').remove('#overlay');
-	return false;
+	 $('.result__close').click(Close_2);
+	 }
+		  
+		);  
+		return false;
 	});
-	}); 
 
- $('.result__close').click(function () {
-	$('.reg_form-more').fadeOut(100);
-	$('#overlay').remove('#overlay');
-	return false;
-});
- }
-      
-    );  
-    return false;
-});
+ 
+
+
 $('.header__burger-item').click(function () {
 	$('#header__burger-menu-input').prop('checked', false)
  });
@@ -197,8 +124,4 @@ $('.header__burger-item').click(function () {
  });
 
 
-
-  
-
-
-
+	
