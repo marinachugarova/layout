@@ -14,31 +14,52 @@ $(document).ready(function() {
 		return false;
 	});
 
+	let Thanks = '<h2>Спасибо!</h2>'
+	let Cross = "<a class='result__close' href='#'>Close</a>"
+	let Connect = "<p>Мы свяжемся с Вами в ближайшее время.</p>"
+	let Alarm = "<h2>Заявка уже отправлена!</h2>"
+	let Result = '.reg_form__result'
+	let moreResult = '.reg_form-more__result'
+	let closeResult = '.result__close'
+
+	function Close () {
+	  $('.reg_form').fadeOut(100);
+	  $('#overlay').remove('#overlay');
+	  return false;
+	}
+
+	function Close_2 () {
+		$('.reg_form-more').fadeOut(100);
+		$('#overlay').remove('#overlay');
+		return false;
+		}
+		
+
+	
+
+
 	$(".reg_form__form").submit(function(){
 		var $form = $(this);
 		$.post(
 			$form.attr("action"),
 			$form.serialize(),   
-		 function () {
-			$('.reg_form').html("<div class='reg_form__result style= dispaly: flex'></div>");
-			$('.reg_form__result').html("<h2>Спасибо!</h2>")
-			.append ("<a class='result__close' href='#'>Close</a>")
-			.append("<p>Мы свяжемся с Вами в ближайшее время.</p>");
-			 $ ('.reg_form').fadeOut(1500);
+		 function submit_fnc () {
+			$(formClass).html("<div class='reg_form__result style= dispaly: flex'></div>");
+			
+			$(Result).html( Thanks)
+			.append (Cross)
+			.append(Connect);
+			 $ (formClass).fadeOut(1500);
 			 $ ('#overlay').fadeOut(1500, function(){
 	
-			$('.reg_form__result').html("<h2>Заявка уже отправлена!</h2>")
-			.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
-			.append("<a class='result__close' href='#'>Close</a>");
+			$(Result).html(Alarm)
+			.append(Connect)
+			.append(Cross);
 				
-			$('.result__close').click(function Close () {
-			$('.reg_form').fadeOut(100);
-			$('#overlay').remove('#overlay');
-			return false;
-			});
+			$(closeResult).click(Close);
 			});
 
-			$('.result__close').click(Close)
+			$(closeResult).click(Close)
 		 });  
 		return false;
 	});
@@ -49,24 +70,19 @@ $(document).ready(function() {
 	  $form.serialize(),   
 	 function () {
 	  $('.reg_form-more').html("<div class='reg_form-more__result style= dispaly: flex'></div>");
-	 $('.reg_form-more__result').html("<h2>Спасибо!</h2>")
-	.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
-	.append ("<a class='result__close' href='#'>Close</a>");
+	 $(moreResult).html(Thanks)
+	.append(Connect)
+	.append (Cross);
 	 $ ('.reg_form-more').fadeOut(1500);
 	 $ ('#overlay').fadeOut(1500, function(){
 	
-		$('.reg_form-more__result').html("<h2>Заявка уже отправлена!</h2>")
-		.append("<p>Мы свяжемся с Вами в ближайшее время.</p>")
-		.append("<a class='result__close' href='#'>Close</a>");
-			
-		$('.result__close').click(function Close_2 () {
-		$('.reg_form-more').fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-		});
+		$(moreResult).html(Alarm)
+		.append(Connect)
+		.append(Cross);
+		$(closeResult).click(Close_2);
 		}); 
 	
-	 $('.result__close').click(Close_2);
+	 $(closeResult).click(Close_2);
 	 }
 		  
 		);  
@@ -123,5 +139,3 @@ $('.header__burger-item').click(function () {
 
  });
 
-
-	
